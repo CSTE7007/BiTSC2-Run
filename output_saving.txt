@@ -1,0 +1,409 @@
+
+> scdata <- readRDS('example_data.RDS')
+> D <- scdata$obs.reads$D_drop # total reads, M * N matrix, where row represents locus, column represents cell
+> X <- scdata$obs.reads$X_drop # variant reads, M * N matrix. where row represents locus, column represents cell
+> #segments <- NULL
+> segments <- scdata$segment
+> psi <- rep(3,dim(D)[2]) #squencing depth
+> ##############################################
+> ######## load parameter file ################
+> ############################################
+> source('specify_pars.R')
+> par_disp(Params, MCMC_par)
+Input information:
+Number of sequencing cells: 100 
+Number of loci: 100 
+Number of genome segments: 4 
+
+Sampling parameters:
+Tuning samples: 1000 
+Burn-in samples: 1000 
+Number of samples to be kept: 1000 
+Number of MCMC chains: 5 , with temperature increment: 0.35 
+> ##############################################
+> ######## sampling ##########################
+> ############################################
+> source("./code_function/sampler.R")
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+Subclone number K = 3 accomplished 3.333333 %; time remaining:  97.91736 mins 
+Subclone number K = 3 accomplished 6.666667 %; time remaining:  96.34922 mins 
+Subclone number K = 3 accomplished 10 %; time remaining:  92.66684 mins 
+Subclone number K = 3 accomplished 13.33333 %; time remaining:  89.21868 mins 
+Subclone number K = 3 accomplished 16.66667 %; time remaining:  85.27488 mins 
+Subclone number K = 3 accomplished 20 %; time remaining:  75.4175 mins 
+Subclone number K = 3 accomplished 23.33333 %; time remaining:  67.87219 mins 
+Subclone number K = 3 accomplished 26.66667 %; time remaining:  75.33587 mins 
+Subclone number K = 3 accomplished 30 %; time remaining:  69.53203 mins 
+Subclone number K = 3 accomplished 33.33333 %; time remaining:  66.73195 mins 
+Subclone number K = 3 accomplished 36.66667 %; time remaining:  63.78747 mins 
+Subclone number K = 3 accomplished 40 %; time remaining:  60.85007 mins 
+Subclone number K = 3 accomplished 43.33333 %; time remaining:  57.82024 mins 
+Subclone number K = 3 accomplished 46.66667 %; time remaining:  54.64329 mins 
+Subclone number K = 3 accomplished 50 %; time remaining:  51.41501 mins 
+Subclone number K = 3 accomplished 53.33333 %; time remaining:  48.03564 mins 
+Subclone number K = 3 accomplished 56.66667 %; time remaining:  44.65182 mins 
+Subclone number K = 3 accomplished 60 %; time remaining:  41.23452 mins 
+Subclone number K = 3 accomplished 63.33333 %; time remaining:  37.8069 mins 
+Subclone number K = 3 accomplished 66.66667 %; time remaining:  34.40001 mins 
+Subclone number K = 3 accomplished 70 %; time remaining:  30.92148 mins 
+Subclone number K = 3 accomplished 73.33333 %; time remaining:  27.50369 mins 
+Subclone number K = 3 accomplished 76.66667 %; time remaining:  24.105 mins 
+Subclone number K = 3 accomplished 80 %; time remaining:  20.65305 mins 
+Subclone number K = 3 accomplished 83.33333 %; time remaining:  17.20385 mins 
+Subclone number K = 3 accomplished 86.66667 %; time remaining:  13.77079 mins 
+Subclone number K = 3 accomplished 90 %; time remaining:  10.33137 mins 
+Subclone number K = 3 accomplished 93.33333 %; time remaining:  6.888499 mins 
+Subclone number K = 3 accomplished 96.66667 %; time remaining:  3.443475 mins 
+Subclone number K = 3 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 3 completed. Time consumed: 101.7054 mins 
+ 
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+Subclone number K = 4 accomplished 3.333333 %; time remaining:  56.37195 mins 
+Subclone number K = 4 accomplished 6.666667 %; time remaining:  391.8458 mins 
+Subclone number K = 4 accomplished 10 %; time remaining:  276.9804 mins 
+Subclone number K = 4 accomplished 13.33333 %; time remaining:  223.9446 mins 
+Subclone number K = 4 accomplished 16.66667 %; time remaining:  190.6861 mins 
+Subclone number K = 4 accomplished 20 %; time remaining:  162.3709 mins 
+Subclone number K = 4 accomplished 23.33333 %; time remaining:  139.7682 mins 
+Subclone number K = 4 accomplished 26.66667 %; time remaining:  123.9655 mins 
+Subclone number K = 4 accomplished 30 %; time remaining:  110.547 mins 
+Subclone number K = 4 accomplished 33.33333 %; time remaining:  102.1569 mins 
+Subclone number K = 4 accomplished 36.66667 %; time remaining:  94.58256 mins 
+Subclone number K = 4 accomplished 40 %; time remaining:  87.61578 mins 
+Subclone number K = 4 accomplished 43.33333 %; time remaining:  81.15016 mins 
+Subclone number K = 4 accomplished 46.66667 %; time remaining:  74.44635 mins 
+Subclone number K = 4 accomplished 50 %; time remaining:  67.08095 mins 
+Subclone number K = 4 accomplished 53.33333 %; time remaining:  60.38435 mins 
+Subclone number K = 4 accomplished 56.66667 %; time remaining:  55.40427 mins 
+Subclone number K = 4 accomplished 60 %; time remaining:  50.72037 mins 
+Subclone number K = 4 accomplished 63.33333 %; time remaining:  46.06605 mins 
+Subclone number K = 4 accomplished 66.66667 %; time remaining:  40.7602 mins 
+Subclone number K = 4 accomplished 70 %; time remaining:  35.75868 mins 
+Subclone number K = 4 accomplished 73.33333 %; time remaining:  32.11149 mins 
+Subclone number K = 4 accomplished 76.66667 %; time remaining:  27.69404 mins 
+Subclone number K = 4 accomplished 80 %; time remaining:  23.70878 mins 
+Subclone number K = 4 accomplished 83.33333 %; time remaining:  19.72734 mins 
+Subclone number K = 4 accomplished 86.66667 %; time remaining:  15.75553 mins 
+Subclone number K = 4 accomplished 90 %; time remaining:  11.8 mins 
+Subclone number K = 4 accomplished 93.33333 %; time remaining:  7.845736 mins 
+Subclone number K = 4 accomplished 96.66667 %; time remaining:  3.910033 mins 
+Subclone number K = 4 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 4 completed. Time consumed: 117.0507 mins 
+ 
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+fitting ...
+  |==============================================================================================================| 100%
+Subclone number K = 5 accomplished 3.333333 %; time remaining:  138.7401 mins 
+Subclone number K = 5 accomplished 6.666667 %; time remaining:  133.814 mins 
+Subclone number K = 5 accomplished 10 %; time remaining:  129.4753 mins 
+Subclone number K = 5 accomplished 13.33333 %; time remaining:  124.2937 mins 
+Subclone number K = 5 accomplished 16.66667 %; time remaining:  119.6849 mins 
+Subclone number K = 5 accomplished 20 %; time remaining:  115.0265 mins 
+Subclone number K = 5 accomplished 23.33333 %; time remaining:  110.3346 mins 
+Subclone number K = 5 accomplished 26.66667 %; time remaining:  105.1209 mins 
+Subclone number K = 5 accomplished 30 %; time remaining:  100.3295 mins 
+Subclone number K = 5 accomplished 33.33333 %; time remaining:  95.10505 mins 
+Subclone number K = 5 accomplished 36.66667 %; time remaining:  86.64475 mins 
+Subclone number K = 5 accomplished 40 %; time remaining:  78.94066 mins 
+Subclone number K = 5 accomplished 43.33333 %; time remaining:  71.98137 mins 
+Subclone number K = 5 accomplished 46.66667 %; time remaining:  65.64751 mins 
+Subclone number K = 5 accomplished 50 %; time remaining:  64.91119 mins 
+Subclone number K = 5 accomplished 53.33333 %; time remaining:  58.53214 mins 
+Subclone number K = 5 accomplished 56.66667 %; time remaining:  53.19566 mins 
+Subclone number K = 5 accomplished 60 %; time remaining:  49.4727 mins 
+Subclone number K = 5 accomplished 63.33333 %; time remaining:  45.59257 mins 
+Subclone number K = 5 accomplished 66.66667 %; time remaining:  40.9055 mins 
+Subclone number K = 5 accomplished 70 %; time remaining:  36.13258 mins 
+Subclone number K = 5 accomplished 73.33333 %; time remaining:  31.47157 mins 
+Subclone number K = 5 accomplished 76.66667 %; time remaining:  27.16092 mins 
+Subclone number K = 5 accomplished 80 %; time remaining:  22.94441 mins 
+Subclone number K = 5 accomplished 83.33333 %; time remaining:  19.22853 mins 
+Subclone number K = 5 accomplished 86.66667 %; time remaining:  15.51824 mins 
+Subclone number K = 5 accomplished 90 %; time remaining:  11.73954 mins 
+Subclone number K = 5 accomplished 93.33333 %; time remaining:  7.883587 mins 
+Subclone number K = 5 accomplished 96.66667 %; time remaining:  3.964966 mins 
+Subclone number K = 5 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 5 completed. Time consumed: 119.6214 mins 
+ 
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+Subclone number K = 6 accomplished 3.333333 %; time remaining:  128.8069 mins 
+Subclone number K = 6 accomplished 6.666667 %; time remaining:  98.31705 mins 
+Subclone number K = 6 accomplished 10 %; time remaining:  85.6034 mins 
+Subclone number K = 6 accomplished 13.33333 %; time remaining:  77.53189 mins 
+Subclone number K = 6 accomplished 16.66667 %; time remaining:  71.83981 mins 
+Subclone number K = 6 accomplished 20 %; time remaining:  67.14349 mins 
+Subclone number K = 6 accomplished 23.33333 %; time remaining:  63.37312 mins 
+Subclone number K = 6 accomplished 26.66667 %; time remaining:  59.85225 mins 
+Subclone number K = 6 accomplished 30 %; time remaining:  56.38328 mins 
+Subclone number K = 6 accomplished 33.33333 %; time remaining:  53.13181 mins 
+Subclone number K = 6 accomplished 36.66667 %; time remaining:  50.00797 mins 
+Subclone number K = 6 accomplished 40 %; time remaining:  47.20491 mins 
+Subclone number K = 6 accomplished 43.33333 %; time remaining:  44.36176 mins 
+Subclone number K = 6 accomplished 46.66667 %; time remaining:  64.96977 mins 
+Subclone number K = 6 accomplished 50 %; time remaining:  59.26752 mins 
+Subclone number K = 6 accomplished 53.33333 %; time remaining:  54.05888 mins 
+Subclone number K = 6 accomplished 56.66667 %; time remaining:  49.18297 mins 
+Subclone number K = 6 accomplished 60 %; time remaining:  44.56276 mins 
+Subclone number K = 6 accomplished 63.33333 %; time remaining:  40.12131 mins 
+Subclone number K = 6 accomplished 66.66667 %; time remaining:  35.94298 mins 
+Subclone number K = 6 accomplished 70 %; time remaining:  31.85639 mins 
+Subclone number K = 6 accomplished 73.33333 %; time remaining:  27.88383 mins 
+Subclone number K = 6 accomplished 76.66667 %; time remaining:  24.10481 mins 
+Subclone number K = 6 accomplished 80 %; time remaining:  20.41973 mins 
+Subclone number K = 6 accomplished 83.33333 %; time remaining:  16.83602 mins 
+Subclone number K = 6 accomplished 86.66667 %; time remaining:  13.33528 mins 
+Subclone number K = 6 accomplished 90 %; time remaining:  9.905118 mins 
+Subclone number K = 6 accomplished 93.33333 %; time remaining:  6.551852 mins 
+Subclone number K = 6 accomplished 96.66667 %; time remaining:  3.24914 mins 
+Subclone number K = 6 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 6 completed. Time consumed: 96.74325 mins 
+ 
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+Subclone number K = 7 accomplished 3.333333 %; time remaining:  86.79463 mins 
+Subclone number K = 7 accomplished 6.666667 %; time remaining:  82.70388 mins 
+Subclone number K = 7 accomplished 10 %; time remaining:  78.86205 mins 
+Subclone number K = 7 accomplished 13.33333 %; time remaining:  194.8829 mins 
+Subclone number K = 7 accomplished 16.66667 %; time remaining:  186.4134 mins 
+Subclone number K = 7 accomplished 20 %; time remaining:  176.2624 mins 
+Subclone number K = 7 accomplished 23.33333 %; time remaining:  179.7601 mins 
+Subclone number K = 7 accomplished 26.66667 %; time remaining:  168.8572 mins 
+Subclone number K = 7 accomplished 30 %; time remaining:  173.4989 mins 
+Subclone number K = 7 accomplished 33.33333 %; time remaining:  162.66 mins 
+Subclone number K = 7 accomplished 36.66667 %; time remaining:  152.9711 mins 
+Subclone number K = 7 accomplished 40 %; time remaining:  146.3628 mins 
+Subclone number K = 7 accomplished 43.33333 %; time remaining:  137.0411 mins 
+Subclone number K = 7 accomplished 46.66667 %; time remaining:  128.1131 mins 
+Subclone number K = 7 accomplished 50 %; time remaining:  119.3044 mins 
+Subclone number K = 7 accomplished 53.33333 %; time remaining:  110.8027 mins 
+Subclone number K = 7 accomplished 56.66667 %; time remaining:  102.2371 mins 
+Subclone number K = 7 accomplished 60 %; time remaining:  93.64686 mins 
+Subclone number K = 7 accomplished 63.33333 %; time remaining:  85.29464 mins 
+Subclone number K = 7 accomplished 66.66667 %; time remaining:  77.10111 mins 
+Subclone number K = 7 accomplished 70 %; time remaining:  68.89024 mins 
+Subclone number K = 7 accomplished 73.33333 %; time remaining:  60.96876 mins 
+Subclone number K = 7 accomplished 76.66667 %; time remaining:  53.23982 mins 
+Subclone number K = 7 accomplished 80 %; time remaining:  45.21498 mins 
+Subclone number K = 7 accomplished 83.33333 %; time remaining:  37.39147 mins 
+Subclone number K = 7 accomplished 86.66667 %; time remaining:  29.66603 mins 
+Subclone number K = 7 accomplished 90 %; time remaining:  21.83547 mins 
+Subclone number K = 7 accomplished 93.33333 %; time remaining:  15.92928 mins 
+Subclone number K = 7 accomplished 96.66667 %; time remaining:  7.923085 mins 
+Subclone number K = 7 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 7 completed. Time consumed: 236.7902 mins 
+ 
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+Subclone number K = 8 accomplished 3.333333 %; time remaining:  229.2003 mins 
+Subclone number K = 8 accomplished 6.666667 %; time remaining:  173.2882 mins 
+Subclone number K = 8 accomplished 10 %; time remaining:  163.9059 mins 
+Subclone number K = 8 accomplished 13.33333 %; time remaining:  168.6467 mins 
+Subclone number K = 8 accomplished 16.66667 %; time remaining:  168.7981 mins 
+Subclone number K = 8 accomplished 20 %; time remaining:  158.1805 mins 
+Subclone number K = 8 accomplished 23.33333 %; time remaining:  148.5667 mins 
+Subclone number K = 8 accomplished 26.66667 %; time remaining:  143.1163 mins 
+Subclone number K = 8 accomplished 30 %; time remaining:  139.7904 mins 
+Subclone number K = 8 accomplished 33.33333 %; time remaining:  131.8391 mins 
+Subclone number K = 8 accomplished 36.66667 %; time remaining:  877.4328 mins 
+Subclone number K = 8 accomplished 40 %; time remaining:  772.3058 mins 
+Subclone number K = 8 accomplished 43.33333 %; time remaining:  683.8082 mins 
+Subclone number K = 8 accomplished 46.66667 %; time remaining:  605.9516 mins 
+Subclone number K = 8 accomplished 50 %; time remaining:  538.2343 mins 
+Subclone number K = 8 accomplished 53.33333 %; time remaining:  476.4634 mins 
+Subclone number K = 8 accomplished 56.66667 %; time remaining:  421.0136 mins 
+Subclone number K = 8 accomplished 60 %; time remaining:  371.761 mins 
+Subclone number K = 8 accomplished 63.33333 %; time remaining:  327.3733 mins 
+Subclone number K = 8 accomplished 66.66667 %; time remaining:  284.7728 mins 
+Subclone number K = 8 accomplished 70 %; time remaining:  245.8763 mins 
+Subclone number K = 8 accomplished 73.33333 %; time remaining:  229.0221 mins 
+Subclone number K = 8 accomplished 76.66667 %; time remaining:  194.017 mins 
+Subclone number K = 8 accomplished 80 %; time remaining:  161.2311 mins 
+Subclone number K = 8 accomplished 83.33333 %; time remaining:  130.5171 mins 
+Subclone number K = 8 accomplished 86.66667 %; time remaining:  101.1209 mins 
+Subclone number K = 8 accomplished 90 %; time remaining:  73.40333 mins 
+Subclone number K = 8 accomplished 93.33333 %; time remaining:  47.43122 mins 
+Subclone number K = 8 accomplished 96.66667 %; time remaining:  23.00688 mins 
+Subclone number K = 8 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 8 completed. Time consumed: 670.5115 mins 
+ 
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+Subclone number K = 9 accomplished 3.333333 %; time remaining:  102.3448 mins 
+Subclone number K = 9 accomplished 6.666667 %; time remaining:  100.7243 mins 
+Subclone number K = 9 accomplished 10 %; time remaining:  97.60559 mins 
+Subclone number K = 9 accomplished 13.33333 %; time remaining:  93.23864 mins 
+Subclone number K = 9 accomplished 16.66667 %; time remaining:  89.7526 mins 
+Subclone number K = 9 accomplished 20 %; time remaining:  86.26689 mins 
+Subclone number K = 9 accomplished 23.33333 %; time remaining:  82.79496 mins 
+Subclone number K = 9 accomplished 26.66667 %; time remaining:  79.24706 mins 
+Subclone number K = 9 accomplished 30 %; time remaining:  75.69049 mins 
+Subclone number K = 9 accomplished 33.33333 %; time remaining:  72.06829 mins 
+Subclone number K = 9 accomplished 36.66667 %; time remaining:  68.54887 mins 
+Subclone number K = 9 accomplished 40 %; time remaining:  64.84554 mins 
+Subclone number K = 9 accomplished 43.33333 %; time remaining:  61.25291 mins 
+Subclone number K = 9 accomplished 46.66667 %; time remaining:  57.55563 mins 
+Subclone number K = 9 accomplished 50 %; time remaining:  53.98545 mins 
+Subclone number K = 9 accomplished 53.33333 %; time remaining:  50.40255 mins 
+Subclone number K = 9 accomplished 56.66667 %; time remaining:  46.79188 mins 
+Subclone number K = 9 accomplished 60 %; time remaining:  43.20443 mins 
+Subclone number K = 9 accomplished 63.33333 %; time remaining:  39.64859 mins 
+Subclone number K = 9 accomplished 66.66667 %; time remaining:  36.06058 mins 
+Subclone number K = 9 accomplished 70 %; time remaining:  32.45422 mins 
+Subclone number K = 9 accomplished 73.33333 %; time remaining:  28.83005 mins 
+Subclone number K = 9 accomplished 76.66667 %; time remaining:  25.21316 mins 
+Subclone number K = 9 accomplished 80 %; time remaining:  21.61781 mins 
+Subclone number K = 9 accomplished 83.33333 %; time remaining:  18.00135 mins 
+Subclone number K = 9 accomplished 86.66667 %; time remaining:  14.40817 mins 
+Subclone number K = 9 accomplished 90 %; time remaining:  10.80853 mins 
+Subclone number K = 9 accomplished 93.33333 %; time remaining:  7.204031 mins 
+Subclone number K = 9 accomplished 96.66667 %; time remaining:  3.599673 mins 
+Subclone number K = 9 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 9 completed. Time consumed: 107.8978 mins 
+ 
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+fitting ...
+  |===================================================================================================| 100%
+Subclone number K = 10 accomplished 3.333333 %; time remaining:  110.2997 mins 
+Subclone number K = 10 accomplished 6.666667 %; time remaining:  107.5197 mins 
+Subclone number K = 10 accomplished 10 %; time remaining:  103.991 mins 
+Subclone number K = 10 accomplished 13.33333 %; time remaining:  100.2209 mins 
+Subclone number K = 10 accomplished 16.66667 %; time remaining:  96.05548 mins 
+Subclone number K = 10 accomplished 20 %; time remaining:  92.22979 mins 
+Subclone number K = 10 accomplished 23.33333 %; time remaining:  88.30649 mins 
+Subclone number K = 10 accomplished 26.66667 %; time remaining:  84.52763 mins 
+Subclone number K = 10 accomplished 30 %; time remaining:  80.39714 mins 
+Subclone number K = 10 accomplished 33.33333 %; time remaining:  81.07124 mins 
+Subclone number K = 10 accomplished 36.66667 %; time remaining:  86.44871 mins 
+Subclone number K = 10 accomplished 40 %; time remaining:  89.42036 mins 
+Subclone number K = 10 accomplished 43.33333 %; time remaining:  89.75922 mins 
+Subclone number K = 10 accomplished 46.66667 %; time remaining:  87.77099 mins 
+Subclone number K = 10 accomplished 50 %; time remaining:  86.0534 mins 
+Subclone number K = 10 accomplished 53.33333 %; time remaining:  83.27817 mins 
+Subclone number K = 10 accomplished 56.66667 %; time remaining:  80.0196 mins 
+Subclone number K = 10 accomplished 60 %; time remaining:  75.99811 mins 
+Subclone number K = 10 accomplished 63.33333 %; time remaining:  71.32765 mins 
+Subclone number K = 10 accomplished 66.66667 %; time remaining:  66.17676 mins 
+Subclone number K = 10 accomplished 70 %; time remaining:  60.17625 mins 
+Subclone number K = 10 accomplished 73.33333 %; time remaining:  54.3888 mins 
+Subclone number K = 10 accomplished 76.66667 %; time remaining:  48.16838 mins 
+Subclone number K = 10 accomplished 80 %; time remaining:  41.57848 mins 
+Subclone number K = 10 accomplished 83.33333 %; time remaining:  34.5769 mins 
+Subclone number K = 10 accomplished 86.66667 %; time remaining:  27.35808 mins 
+Subclone number K = 10 accomplished 90 %; time remaining:  20.29107 mins 
+Subclone number K = 10 accomplished 93.33333 %; time remaining:  13.38799 mins 
+Subclone number K = 10 accomplished 96.66667 %; time remaining:  6.629934 mins 
+Subclone number K = 10 accomplished 100 %; time remaining:  0 mins 
+Subclone number: 10 completed. Time consumed: 197.1989 mins 
+ 
+> View(D)
+> View(X)
+> View(X)
+> View(segments)
+> View(D)
+>    
+##################################################
+> ########## model selection   #####################
+> ##################################################
+> 
+> source("./code_function/Model_select.R")
+> pdf(paste(foldername,"/","selection.pdf",sep=""))
+> BIC_fun(X,D,foldername)
+$K
+[1] 10  3  4  5  6  7  8  9
+
+$BIC
+[1] 51478.12 55194.85 51362.61 51378.07 51396.46 51420.97 51439.91 51455.48
+
+> dev.off()
+null device 
+          1 
+
+##################################################
+> ########## visualization   ######################
+> ##################################################
+> cat("Visualizing sampling results: \n")
+Visualizing sampling results: 
+> source("./code_function/Visualization.R")
+> Fit_visual(foldername,X,D)
+Visualizing samples in folder: temp_out
+Handling file: 1 
+Handling file: 2 
+Handling file: 3 
+Handling file: 4 
+Handling file: 5 
+Handling file: 6 
+Handling file: 7 
+Handling file: 8 
+Note: Using an external vector in selections is ambiguous.
+ℹ Use `all_of(l)` instead of `l` to silence this message.
+ℹ See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
+This message is displayed once per session.
+null device 
+          1 
+
+
